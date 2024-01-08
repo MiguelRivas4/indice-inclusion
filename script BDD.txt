@@ -1,0 +1,73 @@
+create database modululo;
+
+CREATE TABLE Municipio(
+	id_municipio INT primary key not null,
+	nombre_municipio varchar(50) not null
+);
+CREATE TABLE Rol(
+	id_rol int primary key not null,
+	nombre_rol varchar(50) not null
+);
+CREATE TABLE Departamento(
+	id_departamento int primary key not null,
+	nombre_departamento varchar(50) not null,
+	id_municipio int,
+	foreign key(id_municipio)
+	references Municipio(id_municipio)
+);
+CREATE TABLE Usuario(
+	id_usuario int primary key not null,
+	nombre_usuario varchar(100) not null,
+	direccion varchar(200) not null,
+	centro_educativo varchar(50) not null,
+	id_rol int,
+	id_departamento int,
+	foreign key(id_rol)
+	references Rol(id_rol),
+	foreign key(id_departamento)
+	references Departamento(id_departamento)
+);
+CREATE TABLE Tipo(
+	id_tipo int primary key not null,
+	tipo_cuestionario varchar(200) not null
+);
+CREATE TABLE Cuestionario(
+	id_cuestionario int primary key not null,
+	titulo varchar(20) not null,
+	descripcion varchar(200) not null,
+	fecha_inicio timestamp not null,
+	fecha_fin timestamp not null,
+	id_tipo int,
+	foreign key(id_tipo)
+	references Tipo(id_tipo)
+);
+CREATE TABLE Pregunta(
+	id_pregunta int primary key not null,
+	enunciado_pregunta varchar(500) not null,
+	id_tipo	int,
+	foreign key(id_tipo)
+	references Tipo(id_tipo)
+);
+CREATE TABLE Respuesta(
+	id_respuesta int primary key not null,
+	respuesta varchar(200) not null,
+	id_pregunta int,
+	id_usuario int,
+	id_cuestionario int,
+	foreign key(id_pregunta)
+	references Pregunta(id_pregunta),
+	foreign key(id_usuario)
+	references Usuario(id_usuario),
+	foreign key(id_cuestionario)
+	references Cuestionario(id_cuestionario)
+);
+CREATE TABLE Cuestionario_Pregunta(
+	id_cuestionario_pregunta int primary key not null,
+	id_cuestionario int,
+	id_pregunta int,
+	foreign key(id_cuestionario)
+	references Cuestionario(id_cuestionario),
+	foreign key(id_pregunta)
+	references Pregunta(id_pregunta)
+);
+

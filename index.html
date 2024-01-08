@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+   
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar">
+                <div class="menu-icon">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            
+                <div class="logo">
+                    <img src="images/siges logo.png" width="150" height="150" alt="siges logo"/>
+                </div>
+            
+                <!--ITEMS DEL MENU-->
+                <div class="menu-item">
+                    <button class = "inicio"></i>Inicio</button>
+                </div>
+            
+                <div class="menu-item">
+                    <!-- Primer menú de acordeón -->
+                    <button class = "accordion" onclick="toggleAccordionMenu('arrowIcon1')">
+                        <i class="fa-solid fa-caret-right" id = "arrowIcon1" ></i> Preguntas
+                    </button>
+                    <div class="accordion-content">
+                        <!-- Contenido del Menú Preguntas -->
+                        <p class = "submenu-option">Opcion 1</p>
+                        <p class = "submenu-option">Opcion 2</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <button class = "accordion" onclick="toggleAccordionMenu('arrowIcon2')">
+                        <i class="fa-solid fa-caret-right" id = "arrowIcon2"></i> Informes
+                    </button>
+                    <!-- Segundo menú de acordeón -->
+                    <div class="accordion-content" id="informes-content">
+                        <!-- Contenido del Menú Informes -->
+                        <p class = "submenu-option">Opcion 1</p>
+                        <p class = "submenu-option">Opcion 2</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <button class = "accordion" onclick="toggleAccordionMenu('arrowIcon3')">
+                        <i class="fa-solid fa-caret-right" id = "arrowIcon3"></i> Ayuda y Soporte
+                    </button>
+                    <!-- Tercer menú de acordeón -->
+                    <div class="accordion-content" id="ayuda-content">
+                        <!-- Contenido del Menú Ayuda y Soporte -->
+                        <p class = "submenu-option">Opcion 1</p>
+                        <p class = "submenu-option">Opcion 2</p>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <div class="content">
+            <div class="Content-page">
+                <div class="header">
+                    <div class="header">
+                        <!--INICIO BARRA SUPERIOR PARA USUARIO Y CERRAR SESION-->
+                        <div class="sesion-info">
+                            <p>
+                                Usuario: <span class = "username">username</span> | <span class = "logout">Cerrar Sesión</span>
+                            </p>
+                        </div>
+                        <!--FIN BARRA SUPERIOR PARA USUARIO Y CERRAR SESION-->
+                        
+                        <!--INICIO TITULO DE PAGINA ACTUAL-->
+                        <div class="current-page">
+                            <p>Indice de Inclusión</p>
+                            <h1>TEMPLATE</h1>
+                    
+                            <div class="divider-container">
+                                <div class="divider"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Content-page2">
+                <div class="card-container">
+                    <div class="card">
+                        <h2>Card 1</h2>
+                        <p>This is some content for Card 1.</p>
+                    </div>
+                
+                    <div class="card">
+                        <h2>Card 2</h2>
+                        <p>This is some content for Card 2.</p>
+                    </div>
+                
+                    <div class="card">
+                        <h2>Card 3</h2>
+                        <p>This is some content for Card 3.</p>
+                    </div>
+
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

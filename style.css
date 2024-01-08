@@ -1,0 +1,89 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Agregado para usar la fuente Roboto */
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 15%;
+    height: 100vh;
+    background-color: #1C4888;
+    color: #FFFFFF;
+    position: fixed;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    width: 85%; /* Ajustado para que sea el 85% del ancho total */
+    margin-left: 15%; /* Dejar espacio para la barra lateral */
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    padding: 20px; /* Ajustado para dar espacio al contenido del header */
+    background-color: #FFFFFF; /* Fondo blanco para el header */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera para el header */
+    z-index: 2; /* Asegura que el header esté sobre la barra lateral */
+}
+
+.sesion-info {
+    margin-left: auto; /* Mueve la información de sesión al lado derecho */
+}
+
+.current-page {
+    padding: 5px 0;
+    transition: margin-left 0.3s;
+}
+
+.current-page p {
+    color: gray;
+}
+
+.current-page h1 {
+    margin-bottom: 10px;
+}
+
+.divider-container {
+    height: 4px;
+    overflow: hidden;
+}
+
+.divider {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #98C455 25%, #EAC645 25%, #EAC645 50%, #AF3758 50%, #AF3758 75%, #55A9DD 75%);
+    border-radius: 10px;
+}
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card {
+    width: 300px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
+    text-align: center;
+}
+
+.card h2 {
+    color: #333333;
+}
+
+.card p {
+    color: #666666;
+}
